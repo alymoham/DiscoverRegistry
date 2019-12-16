@@ -1,7 +1,7 @@
 FROM maven:3.6-jdk-8-alpine as build
 ADD ./ app/
 WORKDIR /app
-
+RUN mvn clean install
  
 
 FROM openjdk:8-jdk-alpine
